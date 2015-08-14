@@ -1,0 +1,5 @@
+project(CL)
+set (PROJECT_BINARY_DIR ${CMAKE_SOURCE_DIR}/bin)
+set (PROJECT_LIBRARY_DIR ${CMAKE_SOURCE_DIR}/library)
+set (PROJECT_INCLUDE_DIR ${CMAKE_SOURCE_DIR}/include)
+add_subdirectory(CL)
