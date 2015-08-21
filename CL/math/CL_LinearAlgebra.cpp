@@ -2,7 +2,7 @@
 #include <iostream>
 #include <cstdlib>
 #include <string>
-#include <CL_LinearAlgebra.hpp>
+#include <math/CL_LinearAlgebra.hpp>
 
 namespace LinearAlgebra
   {
@@ -601,7 +601,7 @@ namespace LinearAlgebra
 
     void mat33::swap_cols(int i, int j)
     {
-      float t; int k;
+      double t; int k;
       for(k=0; k<3; k++ )
 	{
 	  t = row[k][i];
@@ -839,7 +839,7 @@ namespace LinearAlgebra
 
     void mat44::swap_cols(int i, int j)
     {
-      float t; int k;
+      double t; int k;
       for(k=0; k<4; k++ )
 	{
 	  t = row[k][i];
