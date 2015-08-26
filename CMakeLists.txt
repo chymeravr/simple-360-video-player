@@ -16,6 +16,12 @@ set (FFMPEG_ROOT ${CMAKE_SOURCE_DIR}/thirdparty/ffmpeg)
 set(FFMPEG_LIBRARY ${FFMPEG_ROOT}/lib/avcodec.lib ${FFMPEG_ROOT}/lib/avformat.lib ${FFMPEG_ROOT}/lib/avutil.lib ${FFMPEG_ROOT}/lib/swscale.lib )
 set(FFMPEG_INCLUDE_DIR ${FFMPEG_ROOT}/include)
 
+#oculus
+set(OVR_SDK_ROOT $ENV{OCULUS_SDK_HOME})
+set(OVR_INCLUDE ${OVR_SDK_ROOT}/LibOVR/Include ${OVR_SDK_ROOT}/LibOVRKernel/Src)
+set(OVR_LIBS ${OVR_SDK_ROOT}/LibOVRKernel/Lib/Windows/$(Platform)/$(Configuration)/VS2013/LibOVRKernel.lib
+	${OVR_SDK_ROOT}/LibOVR/Lib/Windows/$(Platform)/$(Configuration)/VS2013/LibOVR.lib)
+
 # Compile external dependencies y
 add_subdirectory (${CMAKE_SOURCE_DIR}/thirdparty)
 

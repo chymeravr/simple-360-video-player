@@ -12,6 +12,7 @@ include_directories(
 	${SDL2_INCLUDE_DIR}
 	${FFMPEG_INCLUDE_DIR}
 	${CMAKE_SOURCE_DIR}/thirdparty/glm-0.9.4.0/
+	${OVR_INCLUDE}
 )
 
 add_definitions(
@@ -40,7 +41,8 @@ target_link_libraries(CL_VideoPlayer
 	${OPENGL_LIBRARY} 
 	GLEW_190 
 	${SDL2_LIBRARY} 
-	CL_Shapes
+	CL_Shapes	
+	${OVR_LIBS}
 )
 
 if (NOT ${CMAKE_GENERATOR} MATCHES "Xcode" )
